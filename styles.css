@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script';
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+
+    color: #555;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+h1, h2, strong {
+    color: #333;
+}
+
+.wishes {
+    font-size: 2em;
+    color: #e6262d;
+    font-family: "Dancing Script", cursive;
+}
+
+a {
+    color: #e66327;
+}
+a:hover {
+    color: #EA956E;
+}
+a:active {
+    color: #662C11;
+}
+a:visited {
+    color: #B34D1E;
+}
+

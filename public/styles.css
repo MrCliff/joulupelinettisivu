@@ -31,6 +31,12 @@ h1, h2, strong {
     height: 600px;
     margin: auto;
 }
+@media screen and (max-width: 1000px) {
+    .unityContainer {
+        width: 600px;
+        height: 400px;
+    }
+}
 
 a {
     color: #e66327;

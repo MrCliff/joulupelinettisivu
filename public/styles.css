@@ -9,6 +9,12 @@ body {
     padding: 4em 1em;
 
     color: #555;
+
+    --primary-color: #E66327;
+    --primary-highlight-color: #FF8045;
+    --primary-shadow-color: #99390D;
+    --complementary-highlight-color: #27E6D2;
+    --complementary-shadow-color: #009989;
 }
 
 h2 {
@@ -20,10 +26,15 @@ h1, h2, strong {
     color: #333;
 }
 
+.version {
+    font-size: 0.6em;
+}
+
 .wishes {
     font-size: 2em;
     color: #e6262d;
     font-family: "Dancing Script", cursive;
+    /*background: linear-gradient(var(--complementary-highlight-color), var(--complementary-shadow-color));*/
 }
 
 .unityContainer {
@@ -33,15 +44,15 @@ h1, h2, strong {
 }
 
 a {
-    color: #e66327;
+    color: var(--primary-color);
 }
 a:hover {
-    color: #EA956E;
+    color: var(--primary-highlight-color);
 }
 a:active {
-    color: #662C11;
+    color: var(--primary-shadow-color);
 }
 a:visited {
-    color: #B34D1E;
+    color: var(--complementary-shadow-color);
 }
 

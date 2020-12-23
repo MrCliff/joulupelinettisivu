@@ -27,18 +27,10 @@ h1, h2, strong {
 }
 
 .unityContainer {
-    /*width: 960px;*/
-    /*height: 600px;*/
     max-width: 50em;
     max-height: 40em;
     margin: auto;
 }
-/*@media screen and (max-width: 1000px) {*/
-/*    .unityContainer {*/
-/*        width: 600px;*/
-/*        height: 400px;*/
-/*    }*/
-/*}*/
 
 a {
     color: #e66327;

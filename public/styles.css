@@ -26,6 +26,12 @@ h1, h2, strong {
     font-family: "Dancing Script", cursive;
 }
 
+.unityContainer {
+    width: 960px;
+    height: 600px;
+    margin: auto;
+}
+
 a {
     color: #e66327;
 }

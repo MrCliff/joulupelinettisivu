@@ -17,9 +17,12 @@ body {
     --complementary-shadow-color: #009989;
 }
 
-h2 {
-    margin-top: 1em;
-    padding-top: 1em;
+section {
+    margin-top: 2em;
+    padding: 1em;
+    border: solid lightgray 1px;
+    border-radius: 0.5em;
+    background-color: white;
 }
 
 h1, h2, strong {
@@ -37,7 +40,12 @@ h1, h2, strong {
     /*background: linear-gradient(var(--complementary-highlight-color), var(--complementary-shadow-color));*/
 }
 
-.unityContainer {
+.unity-canvas {
+    width: 48em;
+}
+
+.unity-canvas, .unityContainer {
+    display: block;
     max-width: 50em;
     max-height: 40em;
     margin: auto;

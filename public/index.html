@@ -11,33 +11,56 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <script src="Joulupeli2020/UnityLoader.js"></script>
-    <script>
-        UnityLoader.instantiate("unityContainer", "Joulupeli2020/WebGL.json");
-    </script>
+    <script src="Joulupeli2021/WebGL.loader.js"></script>
+    <script src="functions.js"></script>
 </head>
 <body>
     <header>
         <h1>Kallioiden joulupeli</h1>
     </header>
     <main>
-        <h2>Joulupeli 2020 <span class="version">v0.1</span></h2>
-        <p>
-            Joulupeli 2020 on yksinkertainen 2D-autopeli, jossa on tarkoituksena ajaa mäkinen pelikenttä alusta loppuun
-            ehjänä. Matkalla vaanii vaaroja, joita tulee väistellä hyppimällä niiden yli.
-        </p>
-        <p>
-            Peliä on tehty marras-joulukuun 2020 aikana keskellä vauva-arkea aina, kun aikaa on löytynyt.
-        </p>
-        <div id="unityContainer" class="unityContainer"></div>
-
-        <p>
-            <strong>Liikkuminen:</strong> Nuolinäppäimet &#129044; &#129046;,
-            <strong>Hyppääminen:</strong> Välilyönti
-        </p>
-        <p>
-            Pelin voi myös ladata <a href="Joulupeli2020/Joulupeli2020.apk">Androidille</a>. Pelin lähdekoodit löytyy
-            avoimena Joonatanin <a href="https://github.com/MrCliff/Joulupeli2020">GitHubista</a>.
-        </p>
+        <section id="joulupeli2021">
+            <h2>Joulupeli 2021 <span class="version">v0.1</span></h2>
+            <p>
+                Joulupeli 2021 on 2D-peli, jossa on tarkoituksena napata putoavista
+                esineistä kiinni mahdollisimman monta ennen kuin ne ehtivät
+                ruudun alareunasta ulos.
+            </p>
+            <p>
+                Peli on tehty marras-joulukuun 2021 aikana.
+            </p>
+            <input type="button" name="startGame" value="Pelaa!" onclick="startJoulupeli2021();" />
+            <canvas id="unity-canvas-joulupeli2021" class="unity-canvas" style="background: #231F20"></canvas>
+    
+            <p>
+                <strong>Esineen nappaaminen:</strong> Klikkaa esinettä hiiren vasemmalla painikkeella
+            </p>
+            <p>
+                Pelin voi myös ladata <a href="Joulupeli2021/Joulupeli2021.apk">Androidille</a>. Pelin lähdekoodit löytyy
+                avoimena Joonatanin <a href="https://github.com/MrCliff/Joulupeli2021">GitHubista</a>.
+            </p>
+        </section>
+        <section id="joulupeli2020">
+            <h2>Joulupeli 2020 <span class="version">v0.1</span></h2>
+            <p>
+                Joulupeli 2020 on yksinkertainen 2D-autopeli, jossa on tarkoituksena ajaa mäkinen pelikenttä alusta loppuun
+                ehjänä. Matkalla vaanii vaaroja, joita tulee väistellä hyppimällä niiden yli.
+            </p>
+            <p>
+                Peliä on tehty marras-joulukuun 2020 aikana keskellä vauva-arkea aina, kun aikaa on löytynyt.
+            </p>
+            <input type="button" name="startGame" value="Pelaa!" onclick="startJoulupeli2020();" />
+            <div id="unityContainer2020" class="unityContainer2020"></div>
+    
+            <p>
+                <strong>Liikkuminen:</strong> Nuolinäppäimet &#129044; &#129046;,
+                <strong>Hyppääminen:</strong> Välilyönti
+            </p>
+            <p>
+                Pelin voi myös ladata <a href="Joulupeli2020/Joulupeli2020.apk">Androidille</a>. Pelin lähdekoodit löytyy
+                avoimena Joonatanin <a href="https://github.com/MrCliff/Joulupeli2020">GitHubista</a>.
+            </p>
+        </section>
 
         <p class="wishes">
             Hyvää joulua ja onnellista uuttavuotta!

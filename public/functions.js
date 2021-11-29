@@ -6,7 +6,8 @@ window.onload = () => {
 function startJoulupeli2020() {
     hideElement("#joulupeli2020 input");
     showElement("#unityContainer2020");
-    UnityLoader.instantiate("unityContainer2020", "Joulupeli2020/WebGL.json");
+    let unity = UnityLoader.instantiate("unityContainer2020", "Joulupeli2020/WebGL.json");
+    unity.Module.deinitializers.push(e => hideJoulupeli2020());
 }
 
 function startJoulupeli2021() {
@@ -22,6 +23,8 @@ function startJoulupeli2021() {
         productVersion: "0.1",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+    }).then(unityInstance => {
+        unityInstance.Module.deinitializers.push(e => hideJoulupeli2021());
     });
 }
 

@@ -40,15 +40,34 @@ h1, h2, strong {
     /*background: linear-gradient(var(--complementary-highlight-color), var(--complementary-shadow-color));*/
 }
 
-.unity-canvas {
-    width: 48em;
-}
-
 .unity-canvas, .unityContainer {
     display: block;
     max-width: 50em;
     max-height: 40em;
+    width: 100%;
     margin: auto;
+}
+
+.play-button {
+    font-size: 2em;
+    padding: 0.5em 1em;
+    color: var(--primary-color);
+    border-radius: 0.3em;
+    border: solid var(--primary-color) 1px;
+}
+
+.play-button:hover {
+    color: var(--primary-highlight-color);
+    border-color: var(--primary-highlight-color);
+}
+
+.play-button:active {
+    color: var(--complementary-shadow-color);
+    border-color: var(--complementary-shadow-color);
+}
+
+.game-container {
+    text-align: center;
 }
 
 a {

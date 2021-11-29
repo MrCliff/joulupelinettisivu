@@ -37,6 +37,7 @@ h1, h2, strong {
     font-size: 2em;
     color: #e6262d;
     font-family: "Dancing Script", cursive;
+    text-align: center;
     /*background: linear-gradient(var(--complementary-highlight-color), var(--complementary-shadow-color));*/
 }
 

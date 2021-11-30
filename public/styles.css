@@ -1,6 +1,16 @@
 @import 'https://fonts.googleapis.com/css?family=Dancing+Script';
 
 body {
+    --text-color: #555;
+    --bold-color: #333;
+    --canvas-background-color: #231F20;
+
+    --primary-color: #E6262D;
+    --primary-highlight-color: #FF454B;
+    --primary-shadow-color: #990D12;
+    --complementary-highlight-color: #27E659;
+    --complementary-shadow-color: #009928;
+
     margin: 0 auto;
     max-width: 50em;
 
@@ -8,13 +18,8 @@ body {
     line-height: 1.5;
     padding: 4em 1em;
 
-    color: #555;
-
-    --primary-color: #E66327;
-    --primary-highlight-color: #FF8045;
-    --primary-shadow-color: #99390D;
-    --complementary-highlight-color: #27E6D2;
-    --complementary-shadow-color: #009989;
+    color: var(--text-color);
+    background-color: #FAFAFA;
 }
 
 section {
@@ -25,17 +30,22 @@ section {
     background-color: white;
 }
 
-h1, h2, strong {
-    color: #333;
+h1, strong {
+    color: var(--bold-color);
+}
+
+h2 {
+    color: var(--complementary-shadow-color);
 }
 
 .version {
     font-size: 0.6em;
+    color: initial;
 }
 
 .wishes {
     font-size: 2em;
-    color: #e6262d;
+    color: var(--primary-color);
     font-family: "Dancing Script", cursive;
     text-align: center;
     /*background: linear-gradient(var(--complementary-highlight-color), var(--complementary-shadow-color));*/
@@ -47,6 +57,7 @@ h1, h2, strong {
     max-height: 40em;
     width: 100%;
     margin: auto;
+    background-color: var(--canvas-background-color);
 }
 
 .play-button {
@@ -82,5 +93,8 @@ a:active {
 }
 a:visited {
     color: var(--complementary-shadow-color);
+}
+a:visited:hover {
+    color: var(--complementary-highlight-color);
 }
 

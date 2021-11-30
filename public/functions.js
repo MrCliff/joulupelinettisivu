@@ -12,8 +12,11 @@ function startJoulupeli2020() {
 
 function startJoulupeli2021() {
     hideElement("#joulupeli2021 input");
-    showElement("#unity-canvas-joulupeli2021");
-    createUnityInstance(document.querySelector("#unity-canvas-joulupeli2021"), {
+    let canvas = showElement("#unity-canvas-joulupeli2021");
+    if (!canvas) {
+        canvas = createCanvas("#joulupeli2021 > .game-container", "unity-canvas-joulupeli2021");
+    }
+    createUnityInstance(canvas, {
         dataUrl: "Joulupeli2021/WebGL.data.unityweb",
         frameworkUrl: "Joulupeli2021/WebGL.framework.js.unityweb",
         codeUrl: "Joulupeli2021/WebGL.wasm.unityweb",
@@ -28,13 +31,28 @@ function startJoulupeli2021() {
     });
 }
 
+function createCanvas(parentSelector, id) {
+    let canvas = document.createElement("canvas");
+    canvas.id = id;
+    canvas.className = "unity-canvas";
+    document.querySelector(parentSelector).appendChild(canvas);
+    return canvas;
+}
+
+function removeElement(id) {
+    let element = document.getElementById(id);
+    if (element) {
+        element.parentElement.removeChild(element);
+    }
+}
+
 function hideAllGames() {
     hideJoulupeli2020();
     hideJoulupeli2021();
 }
 
 function hideJoulupeli2021() {
-    hideElement("#unity-canvas-joulupeli2021");
+    removeElement("unity-canvas-joulupeli2021");
     showElement("#joulupeli2021 input");
 }
 
@@ -44,13 +62,17 @@ function hideJoulupeli2020() {
 }
 
 function showElement(selector) {
-    setElementDisplay(selector, "initial");
+    return setElementDisplay(selector, "initial");
 }
 
 function hideElement(selector) {
-    setElementDisplay(selector, "none");
+    return setElementDisplay(selector, "none");
 }
 
 function setElementDisplay(selector, displayValue) {
-    document.querySelector(selector).style.display = displayValue;
+    let elem = document.querySelector(selector);
+    if (elem) {
+        elem.style.display = displayValue;
+    }
+    return elem;
 }

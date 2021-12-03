@@ -1,6 +1,30 @@
 
 window.onload = () => {
     hideAllGames();
+    loadVersions();
+}
+
+function loadVersions() {
+    loadVersion("#joulupeli2021 .version", "Joulupeli2021/version.txt");
+    loadVersion("#joulupeli2020 .version", "Joulupeli2020/version.txt");
+}
+
+function loadVersion(elementSelector, versionFilePath) {
+    let versionElement = document.querySelector(elementSelector);
+    if (!versionElement) {
+        throw new Error(`Couldn't find version element with selector: ${elementSelector}`);
+    }
+    fetch(versionFilePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Couldn't fetch version. Status: ${response.status}, ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then(response => {
+            let version = response.trim();
+            versionElement.innerText = "v" + (version.length > 0 ? version : "0");
+        });
 }
 
 function startJoulupeli2020() {

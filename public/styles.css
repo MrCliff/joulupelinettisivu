@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Dancing+Script';
 
 body {
+    --light-text-color: #777;
     --text-color: #555;
     --bold-color: #333;
     --canvas-background-color: #231F20;
@@ -98,3 +99,12 @@ a:visited:hover {
     color: var(--complementary-highlight-color);
 }
 
+.privacy-policy {
+    text-align: right;
+    color: var(--light-text-color);
+    font-size: 0.75em;
+}
+
+.privacy-policy a {
+    color: var(--light-text-color);
+}

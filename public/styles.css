@@ -104,6 +104,7 @@ a:visited:hover {
 section footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -112,6 +113,7 @@ section footer {
     color: var(--light-text-color);
     font-size: 0.75em;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.7em;
 }
 .privacy-policy a {

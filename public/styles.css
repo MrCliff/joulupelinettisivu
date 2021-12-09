@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Dancing+Script';
 
 body {
-    --light-text-color: #777;
+    --light-text-color: #AAA;
     --text-color: #555;
     --bold-color: #333;
     --canvas-background-color: #231F20;
@@ -12,12 +12,14 @@ body {
     --complementary-highlight-color: #27E659;
     --complementary-shadow-color: #009928;
 
+    --border-radius: 0.3em;
+
     margin: 0 auto;
     max-width: 50em;
 
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
-    padding: 4em 1em;
+    padding: 3em 1em 0;
 
     color: var(--text-color);
     background-color: #FAFAFA;
@@ -65,7 +67,7 @@ h2 {
     font-size: 2em;
     padding: 0.5em 1em;
     color: var(--primary-color);
-    border-radius: 0.3em;
+    border-radius: var(--border-radius);
     border: solid var(--primary-color) 1px;
 }
 
@@ -99,12 +101,33 @@ a:visited:hover {
     color: var(--complementary-highlight-color);
 }
 
-.privacy-policy {
-    text-align: right;
-    color: var(--light-text-color);
-    font-size: 0.75em;
+section footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+.privacy-policy {
+    align-self: flex-end;
+    color: var(--light-text-color);
+    font-size: 0.75em;
+    display: flex;
+    gap: 0.7em;
+}
 .privacy-policy a {
     color: var(--light-text-color);
+}
+
+.google-play img {
+    height: 4em;
+    vertical-align: middle;
+}
+
+.page-footer {
+    background-color: #F3F3F3;
+    padding: 1em 2em;
+    margin-top: 5em;
+    color: var(--light-text-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
 }

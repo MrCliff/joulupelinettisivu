@@ -5,7 +5,7 @@ window.onload = () => {
 }
 
 function loadVersions() {
-    loadVersion("#joulupeli2021 .version", "Joulupeli2021/version.txt");
+    loadVersion("#joulupeli2021 .version", "Joulupeli2021/game/version.txt");
     loadVersion("#joulupeli2020 .version", "Joulupeli2020/version.txt");
 }
 
@@ -41,9 +41,9 @@ function startJoulupeli2021() {
         canvas = createCanvas("#joulupeli2021 > .game-container", "unity-canvas-joulupeli2021");
     }
     createUnityInstance(canvas, {
-        dataUrl: "Joulupeli2021/WebGL.data.unityweb",
-        frameworkUrl: "Joulupeli2021/WebGL.framework.js.unityweb",
-        codeUrl: "Joulupeli2021/WebGL.wasm.unityweb",
+        dataUrl: "Joulupeli2021/game/WebGL.data.unityweb",
+        frameworkUrl: "Joulupeli2021/game/WebGL.framework.js.unityweb",
+        codeUrl: "Joulupeli2021/game/WebGL.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "KallioStudios",
         productName: "Joulupeli-2021",
